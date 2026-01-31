@@ -1,9 +1,7 @@
 import "dotenv/config";
 
 export let authRouter = (req, res, next) => {
-  let key = process.env.KEY;
-
-  if (key === req.query.key) {
+  if (process.env.KEY === req.query.key) {
     console.log("auth: true");
     next();
   } else {
