@@ -2,11 +2,13 @@ import "dotenv/config";
 import express from "express";
 
 import { playerRouter } from "./modules/routes/player-routes.js";
+import { authRouter } from "./modules/routes/authenticate.js";
 import { localCache } from "./modules/database/cache.js";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.use(authRouter);
 app.use("/player", playerRouter);
 
 app.get("/cache", (req, res) => [res.send(localCache)]);
