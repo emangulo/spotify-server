@@ -38,7 +38,7 @@ router.get("/:action", async (req, res) => {
   } catch (error) {
     console.error(error);
   }
-  res.send("DONE");
+  res.send(`${action} done!`);
 });
 
 export { router as playerRouter };
