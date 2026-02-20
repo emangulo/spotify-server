@@ -1,8 +1,9 @@
+//@ts-nocheck
 import "dotenv/config";
 
 const url = "https://accounts.spotify.com/api/token";
 
-export const refreshToken = async (refresh_token) => {
+export const refreshToken = async (refresh_token: string) => {
   try {
     let response = await fetch(url, {
       method: "POST",

@@ -1,3 +1,4 @@
+//@ts-nocheck
 import "dotenv/config";
 import { getAccessToken } from "../database/cache.js";
 

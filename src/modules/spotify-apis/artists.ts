@@ -7,7 +7,7 @@ const options = {
   },
 };
 
-const getArtistInfo = async (artistID) => {
+const getArtistInfo = async (artistID: string) => {
   try {
     let response = await fetch(base_url + artistID, options);
     let data = await response.json();

@@ -1,6 +1,6 @@
+//@ts-nocheck
 import "dotenv/config";
 import { refreshToken } from "../authorization/3-refresh-token.js";
-import { getUserData } from "./supabase.js";
 
 export let localCache = {};
 
