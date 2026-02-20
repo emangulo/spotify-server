@@ -1,4 +1,3 @@
-//@ts-nocheck
 import "dotenv/config";
 import express from "express";
 
@@ -12,7 +11,7 @@ const PORT = process.env.PORT || 3000;
 app.use(authRouter);
 app.use("/player", playerRouter);
 
-app.get("/cache", (req, res) => [res.send(localCache)]);
+app.get("/cache", (_req, res) => [res.send(localCache)]);
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
